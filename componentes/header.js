@@ -1,32 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import Equipo from './Equipo';
 
-export default function header() {
+const Header = (props) => {
   return (
-    <View style={styles.header}>
-        <Text style={styles.text}>Equipo 1</Text>
-        <Text style={styles.text}>Equipo 2</Text>
-        <Text style={styles.text}>Equipo 3</Text>
+    <View style={styles.container}>
+      <Equipo></Equipo>
+      <Equipo></Equipo>
+      <Equipo></Equipo>
     </View>
-);
+  );
 }
-
 const styles = StyleSheet.create({
-  header: {
-    borderColor: 'black',
-    borderWidth: 2,
-    height:100,
-    flexDirection:'row',
-    alignItems:'center',
-    
-  }, 
-  text: {
-    color:'black',
-    borderColor:'black',
-    borderWidth:1,
-    fontSize:22,
-    margin:10,
-    padding:4
-
+  container: {
+    backgroundColor: '#fff',
+    flexDirection: 'row',
   },
 });
+export default Header;

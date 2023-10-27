@@ -1,41 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import Jugador from './Jugador';
 
-export default function listaJugador() {
+const ListaJugadores = (props) => {
   return (
-    
-    <View style={styles.body}>
-        <View style={styles.asideStyle}>
-            <Text style={styles.text}>Jugador 1.1</Text>
-            <Text style={styles.text}>Jugador 1.2</Text>
-            <Text style={styles.text}>Jugador 1.3</Text>
-            <Text style={styles.text}>Jugador 1.4</Text>
-            <Text style={styles.text}>Jugador 1.5</Text>
-        </View> 
+    <View style={styles.container}>
+      <Jugador></Jugador>
+      <Jugador></Jugador>
+      <Jugador></Jugador>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  
-  text: {
-    color:'black',
-    borderColor:'black',
-    borderWidth:1,
-    fontSize:22,
-    margin:10,
-    padding:4
+  container: {
+    backgroundColor: '#fff',
+    display: flex,
+  },
 
-  },
-  body: {
-    borderColor: 'black',
-    borderWidth: 2,
-    flex:1,
-    flexDirection:'row'
-  },
-  asideStyle: {
-    borderColor: 'black',
-    borderWidth: 2,
-    width: 200
-  },
 });
+export default ListaJugadores;

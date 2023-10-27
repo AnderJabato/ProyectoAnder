@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#2196F3',  // Color azul para diferenciar del ejemplo anterior
     padding: 10,
     borderRadius: 5,
   },

@@ -1,12 +1,11 @@
-// equipo.js
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 
-const Equipo = () => {
+const Equipo = (setEquipo) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={() => alert('Botón del equipo presionado!')}>
-        <Text style={styles.buttonText}> Equipo</Text>
+      <TouchableOpacity style={styles.button} onPress={props.onPress}>
+        <Text style={styles.buttonText}>Equipo</Text>
       </TouchableOpacity>
     </View>
   );
@@ -14,19 +13,17 @@ const Equipo = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    margin: 10,
   },
   button: {
     backgroundColor: '#4CAF50',
     padding: 10,
-    borderRadius: 5
+    borderRadius: 5,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 16
-  }
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
 });
 
 export default Equipo;
